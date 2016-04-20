@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "versions",
+    "highlight",
+    "ga"
+  ],
+  "pluginsConfig": {
+    "versions": {
+      "type": "branches",
+      "includeFilepath": false
+    },
+    "ga": {
+        "token": "UA-41067508-7"
+    }
+  },
+  "structure": {
+    "readme": "intro.md"
+  }
+}
