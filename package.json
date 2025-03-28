@@ -1,12 +1,18 @@
 {
   "name": "ng-course-2",
   "version": "1.0.0",
-  "description": "Git Book, and markdown resources for learning/teaching Angular 2",
+  "description": "Git Book, and markdown resources for learning/teaching Angular 2+",
   "main": "",
   "directories": {
     "example": "examples"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gitbook-plugin-ga": "^1.0.1",
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-image-captions": "^3.1.0",
+    "gitbook-plugin-theme-rangle-io": "^1.0.9",
+    "gitbook-plugin-versions": "^2.1.4"
+  },
   "devDependencies": {
     "gitbook-cli": "^2.2.0",
     "live-server": "^1.0.0"
@@ -14,9 +20,10 @@
   "scripts": {
     "build": "gitbook build",
     "dev": "gitbook serve",
+    "postinstall": "gitbook install",
+    "gitbook": "gitbook",
     "examples": "live-server ./examples",
-    "exercises": "live-server ./exercises",
-    "postinstall": "gitbook install"
+    "exercises": "live-server ./exercises"
   },
   "repository": {
     "type": "git",

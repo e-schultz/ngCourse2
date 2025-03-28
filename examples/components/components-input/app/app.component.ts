@@ -1,18 +1,13 @@
-import {Component} from '@angular/core';
-import {Hello} from './hello.component';
+import { Component } from '@angular/core';
 
 @Component({
-	selector: 'app',
-	directives: [Hello],
-	template: `<div>
-	    <hello [name]="helloName"></hello>
-	    <hello name="Other World"></hello>
-	  </div>`
+  selector: 'rio-app',
+  templateUrl: 'app/app.component.html'
 })
-export class App {
+export class AppComponent {
   helloName: string;
-  
+
   constructor() {
-    this.helloName = "World";
+    this.helloName = 'Other World';
   }
 }

@@ -1,28 +1,14 @@
-import {Component} from '@angular/core';
-import {Counter} from './counter.component';
+import { Component, OnChange } from '@angular/core';
 
 @Component({
-  selector: 'app',
-  template: `
-    <div>
-      Parent Num: {{ num }}<br />
-      Parent Count: {{ parentCount }}
-	    <counter [count]="num" (result)="onChange($event)">
-	    </counter>
-	  </div>
-  `,
-  directives: [Counter]
+  selector: 'rio-app',
+  templateUrl: 'app/app.component.html'
 })
-export class App {
-  num: number;
-  parentCount: number;
-  
-  constructor() {
-    this.num = 0;
-    this.parentCount = 0;
-  }
-  
-  onChange(val: any) {
+export class AppComponent implements OnChange {
+  num = 0;
+  parentCount = 0;
+
+  ngOnChange(val: number) {
     this.parentCount = val;
   }
 }
